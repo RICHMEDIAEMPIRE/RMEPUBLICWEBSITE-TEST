@@ -6,17 +6,17 @@
   <title>Empire Eats | Home</title>
   <style>
     body { margin: 0; font-family: 'Georgia', serif; background: #fffaf0; color: #333; }
-    header { background: #8b0000; color: white; padding: 2rem 1rem; text-align: center; }
+    header { background: #8b0000; color: white; padding: 2rem 1rem; text-align: center; background-image: url('header-bg.jpg'); background-size: cover; background-position: center; }
     nav { background: #640000; padding: 1rem; text-align: center; }
     nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    .hero { background: #eee; padding: 3rem 1rem; text-align: center; }
+    .hero { background-image: url('hero.jpg'); background-size: cover; background-position: center; padding: 4rem 1rem; text-align: center; color: white; }
     .hero h2 { margin-top: 0; }
     .menu-tabs { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
     .tab { background: #8b0000; color: white; padding: 1rem; border-radius: 5px; cursor: pointer; }
     .menu-section { display: none; text-align: center; }
     .menu-section.active { display: block; }
     .food-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1rem; }
-    .food-item { width: 200px; height: 150px; background: #ccc url('https://placehold.co/200x150') center/cover no-repeat; border-radius: 5px; }
+    .food-item img { width: 200px; height: 150px; object-fit: cover; border-radius: 5px; }
     .order-btn { background: #8b0000; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
     footer { background: #f0e0d6; text-align: center; padding: 1rem; margin-top: 3rem; }
     footer a { color: #8b0000; margin: 0 1rem; text-decoration: none; font-weight: bold; }
@@ -50,27 +50,27 @@
   <section id="breakfast" class="menu-section active">
     <h3>Breakfast Favorites</h3>
     <div class="food-gallery">
-      <div class="food-item"></div>
-      <div class="food-item"></div>
-      <div class="food-item"></div>
+      <div class="food-item"><img src="breakfast1.jpg" alt="Breakfast 1"></div>
+      <div class="food-item"><img src="breakfast2.jpg" alt="Breakfast 2"></div>
+      <div class="food-item"><img src="breakfast3.jpg" alt="Breakfast 3"></div>
     </div>
   </section>
 
   <section id="lunch" class="menu-section">
     <h3>Lunch Specials</h3>
     <div class="food-gallery">
-      <div class="food-item"></div>
-      <div class="food-item"></div>
-      <div class="food-item"></div>
+      <div class="food-item"><img src="lunch1.jpg" alt="Lunch 1"></div>
+      <div class="food-item"><img src="lunch2.jpg" alt="Lunch 2"></div>
+      <div class="food-item"><img src="lunch3.jpg" alt="Lunch 3"></div>
     </div>
   </section>
 
   <section id="dinner" class="menu-section">
     <h3>Dinner Menu</h3>
     <div class="food-gallery">
-      <div class="food-item"></div>
-      <div class="food-item"></div>
-      <div class="food-item"></div>
+      <div class="food-item"><img src="dinner1.jpg" alt="Dinner 1"></div>
+      <div class="food-item"><img src="dinner2.jpg" alt="Dinner 2"></div>
+      <div class="food-item"><img src="dinner3.jpg" alt="Dinner 3"></div>
     </div>
   </section>
 
