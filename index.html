@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,13 +93,19 @@
   <header>
     <img src="logo.png" alt="Rich Media Empire logo" />
     <h1>RICH MEDIA EMPIRE</h1>
-  </header>  <div class="layout" id="layout0">Your Website<br/>Your Socials<br/>Your Links</div>
+  </header>
+
+  <div class="layout" id="layout0">Your Website<br/>Your Socials<br/>Your Links</div>
   <div class="layout hidden" id="layout1">Portfolio Grid<br/>Interactive Demo<br/>Bold CTAs</div>
   <div class="layout hidden" id="layout2">Split Screen Design<br/>Contact Form<br/>Client Testimonials</div>
   <div class="layout hidden" id="layout3">Scrolling Product Feed<br/>Pricing Table<br/>Payment Button</div>
-  <div class="layout hidden" id="layout4">Sleek One-Pager<br/>Video Banner<br/>Sticky Navigation</div><button onclick="nextLayout()">See Next Layout</button>
+  <div class="layout hidden" id="layout4">Sleek One-Pager<br/>Video Banner<br/>Sticky Navigation</div>
 
-  <footer>Contact: <a href="mailto:rich@richmediaempire.com" style="color:gold">rich@richmediaempire.com</a> | <a href="layouts.html" style="color:gold">View All Layouts</a></footer>  <script>
+  <button onclick="nextLayout()">See Next Layout</button>
+
+  <footer>Contact: <a href="mailto:rich@richmediaempire.com" style="color:gold">rich@richmediaempire.com</a> | <a href="layouts.html" style="color:gold">View All Layouts</a></footer>
+
+  <script>
     let current = 0;
     const layouts = document.querySelectorAll('.layout');
     function nextLayout() {
@@ -106,5 +113,6 @@
       current = (current + 1) % layouts.length;
       layouts[current].classList.remove('hidden');
     }
-  </script></body>
+  </script>
+</body>
 </html>
