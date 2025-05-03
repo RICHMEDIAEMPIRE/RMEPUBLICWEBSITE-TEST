@@ -3,47 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Restaurant Layout</title>
+  <title>Empire Eats | Home</title>
   <style>
-    body { background: #fff8f0; font-family: 'Georgia', serif; color: #2c2c2c; margin: 0; padding: 0; }
-    header { background: #8b0000; color: white; padding: 2rem; text-align: center; }
-    h1 { margin: 0; }
-    section { padding: 2rem; text-align: center; }
-    .menu-item { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1rem; margin: 1rem auto; max-width: 300px; }
-    .menu-item h3 { margin-top: 0; }
-    .button { background: #8b0000; color: #fff; padding: 0.75rem 1.25rem; border: none; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 1rem; font-weight: bold; }
-    footer { background: #f0e0d6; padding: 1rem; text-align: center; }
-    nav a { color: #8b0000; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    body { margin: 0; font-family: 'Georgia', serif; background: #fffaf0; color: #333; }
+    header { background: #8b0000; color: white; padding: 2rem 1rem; text-align: center; }
+    nav { background: #640000; padding: 1rem; text-align: center; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    .hero { background: #eee; padding: 3rem 1rem; text-align: center; }
+    .hero h2 { margin-top: 0; }
+    .menu-tabs { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
+    .tab { background: #8b0000; color: white; padding: 1rem; border-radius: 5px; cursor: pointer; }
+    .menu-section { display: none; text-align: center; }
+    .menu-section.active { display: block; }
+    .food-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1rem; }
+    .food-item { width: 200px; height: 150px; background: #ccc url('https://placehold.co/200x150') center/cover no-repeat; border-radius: 5px; }
+    .order-btn { background: #8b0000; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    footer { background: #f0e0d6; text-align: center; padding: 1rem; margin-top: 3rem; }
+    footer a { color: #8b0000; margin: 0 1rem; text-decoration: none; font-weight: bold; }
   </style>
 </head>
 <body>
   <header>
     <h1>Empire Eats</h1>
-    <p>Delicious. Homemade. Memorable.</p>
+    <p>Homestyle Flavor. Five-Star Experience.</p>
   </header>
 
-  <section>
-    <div class="menu-item">
-      <h3>Signature Burger</h3>
-      <p>Angus beef, cheddar cheese, lettuce, tomato, special sauce</p>
-    </div>
-    <div class="menu-item">
-      <h3>Empire Salad</h3>
-      <p>Organic greens, roasted veggies, vinaigrette dressing</p>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Reservations</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Welcome to Empire Eats</h2>
+    <p>Authentic dishes crafted with heart and heritage. Order online or dine in today!</p>
+    <button class="order-btn">Order Now</button>
+  </section>
+
+  <section class="menu-tabs">
+    <div class="tab" onclick="showMenu('breakfast')">Breakfast</div>
+    <div class="tab" onclick="showMenu('lunch')">Lunch</div>
+    <div class="tab" onclick="showMenu('dinner')">Dinner</div>
+  </section>
+
+  <section id="breakfast" class="menu-section active">
+    <h3>Breakfast Favorites</h3>
+    <div class="food-gallery">
+      <div class="food-item"></div>
+      <div class="food-item"></div>
+      <div class="food-item"></div>
     </div>
   </section>
 
-  <section>
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:rich@richmediaempire.com">rich@richmediaempire.com</a></p>
+  <section id="lunch" class="menu-section">
+    <h3>Lunch Specials</h3>
+    <div class="food-gallery">
+      <div class="food-item"></div>
+      <div class="food-item"></div>
+      <div class="food-item"></div>
+    </div>
+  </section>
+
+  <section id="dinner" class="menu-section">
+    <h3>Dinner Menu</h3>
+    <div class="food-gallery">
+      <div class="food-item"></div>
+      <div class="food-item"></div>
+      <div class="food-item"></div>
+    </div>
   </section>
 
   <footer>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="layouts.html">All Layouts</a>
-      <a href="layout-startup.html">Next Layout</a>
-    </nav>
+    <a href="index.html">Home</a>
+    <a href="layouts.html">All Layouts</a>
+    <a href="layout-startup.html">Next Layout</a>
   </footer>
+
+  <script>
+    function showMenu(id) {
+      document.querySelectorAll('.menu-section').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
