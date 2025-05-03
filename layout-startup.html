@@ -2,30 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Startup Landing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Startup Layout</title>
   <style>
-    body { margin: 0; font-family: 'Helvetica Neue', sans-serif; background: #f5f5f5; color: #333; text-align: center; padding: 2rem; }
-    h1 { font-size: 2.5rem; color: #007bff; }
-    p { font-size: 1.2rem; max-width: 700px; margin: 1rem auto; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    header { background: #1e293b; padding: 2rem; text-align: center; }
+    h1 { margin: 0; font-size: 2.5rem; }
+    section { padding: 2rem; text-align: center; }
+    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem; }
+    .feature-box { background: #1e293b; padding: 1rem; border-radius: 8px; width: 280px; }
+    .button { background: #38bdf8; color: #0f172a; padding: 0.75rem 1.25rem; border: none; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 2rem; font-weight: bold; }
+    .socials a { margin: 0 0.5rem; color: #38bdf8; text-decoration: none; }
+    footer { background: #1e293b; padding: 1rem; text-align: center; }
+    nav a { color: #38bdf8; margin: 0 1rem; text-decoration: none; font-weight: bold; }
   </style>
 </head>
 <body>
-  <h1>Launch Your Dream</h1>
-  <p>Join thousands of startups who trust our tools to build fast and scale smart.</p>
-  <script>
-    const homeBtn = document.createElement("a");
-    homeBtn.href = "/";
-    homeBtn.textContent = "Home";
-    homeBtn.style.position = "fixed";
-    homeBtn.style.bottom = "20px";
-    homeBtn.style.left = "20px";
-    homeBtn.style.padding = "10px 15px";
-    homeBtn.style.background = "#ffcc00";
-    homeBtn.style.color = "#000";
-    homeBtn.style.borderRadius = "5px";
-    homeBtn.style.textDecoration = "none";
-    homeBtn.style.fontWeight = "bold";
-    document.body.appendChild(homeBtn);
-  </script>
+  <header>
+    <h1>Launch Your Dream</h1>
+    <p>Innovative tools to get your startup off the ground.</p>
+  </header>
+
+  <section>
+    <div class="features">
+      <div class="feature-box">
+        <h3>Easy Setup</h3>
+        <p>Launch in minutes with our guided templates and tools.</p>
+      </div>
+      <div class="feature-box">
+        <h3>AI Integration</h3>
+        <p>Boost productivity and automate tasks with smart tools.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Scalable Design</h3>
+        <p>From MVP to global scale, we support your entire journey.</p>
+      </div>
+    </div>
+
+    <a href="mailto:rich@richmediaempire.com" class="button">Contact Us</a>
+  </section>
+
+  <footer>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="layouts.html">All Layouts</a>
+      <a href="layout-agency.html">First Layout</a>
+    </nav>
+  </footer>
 </body>
 </html>
