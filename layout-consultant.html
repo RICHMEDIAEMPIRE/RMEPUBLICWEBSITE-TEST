@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clarity Consulting</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consultant Layout</title>
   <style>
-    body { margin: 0; font-family: 'Open Sans', sans-serif; background: #f7f9fc; color: #333; }
-    header { background: #2a2a2a; color: #fff; padding: 2rem; text-align: center; }
-    .intro {
-      max-width: 800px; margin: 2rem auto; padding: 1rem; text-align: center;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .service {
-      background: white; padding: 1rem;
-      border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center; padding: 1rem;
-      font-size: 0.9rem; color: #666;
-    }
+    body { background: #0d1b2a; color: #e0e1dd; font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; }
+    header, footer { background: #1b263b; text-align: center; padding: 1.5rem 1rem; }
+    h1 { color: #e0e1dd; margin: 0; font-size: 2rem; }
+    section { padding: 2rem; text-align: center; }
+    nav a { color: #e0e1dd; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    .hero-text { font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .button { background: #e0e1dd; color: #0d1b2a; padding: 0.75rem 1.25rem; border: none; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 1rem; font-weight: bold; }
+    .socials a { margin: 0 0.5rem; color: #e0e1dd; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Clarity Consulting</h1>
-    <p>Guidance. Structure. Results.</p>
+    <h1>Professional Consulting Services</h1>
+    <p>Helping your business navigate change and growth with expert guidance.</p>
   </header>
-  <section class="intro">
-    <h2>Your vision, backed by strategy.</h2>
-    <p>We help founders, creators, and small businesses grow sustainably with data-informed action plans.</p>
+
+  <section>
+    <p class="hero-text">Whether you're starting a new venture or refining your strategy, we provide tailored consulting to help you thrive.</p>
+    <a href="mailto:rich@richmediaempire.com" class="button">Inquire About Consulting</a>
   </section>
-  <section class="services">
-    <div class="service">
-      <h3>Business Planning</h3>
-      <p>From vision to execution, we guide every step.</p>
-    </div>
-    <div class="service">
-      <h3>Operations Analysis</h3>
-      <p>Optimize performance with proven frameworks.</p>
-    </div>
-    <div class="service">
-      <h3>Financial Modeling</h3>
-      <p>Forecasts and tools to make better decisions.</p>
-    </div>
+
+  <section class="socials">
+    <h2>Let's Connect</h2>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+    <a href="#">Email</a>
   </section>
+
   <footer>
-    contact@clarityconsulting.com | @clarityco
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="layouts.html">All Layouts</a>
+      <a href="layout-merchstore.html">Next Layout</a>
+    </nav>
   </footer>
 </body>
 </html>
