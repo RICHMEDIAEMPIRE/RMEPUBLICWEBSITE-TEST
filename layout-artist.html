@@ -1,92 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Artist Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultant Layout</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: #121212;
-      color: #f0f0f0;
-    }
-    header {
-      background: #1e1e1e;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #ff66cc;
-      margin: 0;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .gallery div {
-      background: #333;
-      aspect-ratio: 4 / 3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #aaa;
-      font-size: 1.1rem;
-      border-radius: 4px;
-    }
-    .contact {
-      text-align: center;
-      padding: 2rem;
-      background: #1e1e1e;
-    }
-    .contact p {
-      margin-bottom: 1rem;
-    }
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .nav-buttons a {
-      background: #ffcc00;
-      color: #000;
-      padding: 0.7rem 1.3rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    body { background: #0d1b2a; color: #e0e1dd; font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; }
+    header, footer { background: #1b263b; text-align: center; padding: 1.5rem 1rem; }
+    h1 { color: #e0e1dd; margin: 0; font-size: 2rem; }
+    section { padding: 2rem; text-align: center; }
+    nav a { color: #e0e1dd; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    .hero-text { font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .button { background: #e0e1dd; color: #0d1b2a; padding: 0.75rem 1.25rem; border: none; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 1rem; font-weight: bold; }
+    .socials a { margin: 0 0.5rem; color: #e0e1dd; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Art World</h1>
-    <p>Browse my latest creations, commissions, and exhibitions</p>
-  </header>
-
-  <section class="gallery">
-    <div>Artwork 1</div>
-    <div>Artwork 2</div>
-    <div>Artwork 3</div>
-    <div>Artwork 4</div>
-    <div>Artwork 5</div>
-    <div>Artwork 6</div>
-  </section>
-
-  <section class="contact">
-    <p>Interested in a custom piece or collaboration?</p>
-    <div class="nav-buttons">
+    <h1>Professional Consulting Services</h1>
+    <p>Helping your business navigate change and growth with expert guidance.</p>
+  </header>  <section>
+    <p class="hero-text">Whether you're starting a new venture or refining your strategy, we provide tailored consulting to help you thrive.</p>
+    <a href="mailto:rich@richmediaempire.com" class="button">Inquire About Consulting</a>
+  </section>  <section class="socials">
+    <h2>Let's Connect</h2>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+    <a href="#">Email</a>
+  </section>  <footer>
+    <nav>
       <a href="index.html">Home</a>
-      <a href="layouts.html">Layouts</a>
-      <a href="layout-blog.html">Next Layout</a>
-    </div>
-  </section>
+      <a href="layouts.html">All Layouts</a>
+      <a href="layout-merchstore.html">Next Layout</a>
+    </nav>
+  </footer>
 </body>
 </html>
