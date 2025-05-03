@@ -1,67 +1,86 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rich Media Empire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RICH MEDIA EMPIRE</title>
   <style>
     body {
+      font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('A_logo_for_"Rich_Media_Empire"_is_prominently_disp.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      font-family: Arial, sans-serif;
       color: white;
+      background: url('bg-spotlight-logo.jpg') no-repeat center center fixed;
+      background-size: cover;
       text-align: center;
-    }.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  min-height: 100vh;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  font-size: 3em;
-  margin: 0.3em 0;
-  color: #FFD700;
-}
-
-p {
-  font-size: 1.2em;
-  margin: 0.5em 0 2em;
-}
-
-.button {
-  background-color: #FFD700;
-  border: none;
-  color: black;
-  padding: 15px 30px;
-  margin: 10px;
-  font-size: 1em;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.button:hover {
-  background-color: #ffcc00;
-}
-
+    }
+    header {
+      padding: 3rem 1rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    .buttons {
+      margin-top: 2rem;
+    }
+    a.button {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: gold;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+    .layout-box {
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    .layout1 { background-color: rgba(47, 47, 47, 0.6); }
+    .layout2 { background-color: rgba(34, 34, 34, 0.6); color: lime; }
+    .layout3 { background-color: white; color: #111; }
+    .layout4 { background-color: #333; color: lime; font-family: monospace; }
+    .layout5 { background-color: #000; color: white; font-style: italic; }
+    .layout6 { background-color: lime; color: #000; text-transform: uppercase; }
   </style>
 </head>
 <body>
-  <div class="overlay">
+  <header>
     <h1>Rich Media Empire</h1>
     <p>Building Brands. Powering Profits. Creating Legacy.</p>
-    <a href="layouts.html" class="button">View Design Layouts</a>
-    <a href="mailto:rich@richmediaempire.com" class="button">Email Us</a>
-    <a href="https://x.com/RICHMEDIAEMPIRE" class="button" target="_blank">Follow Us on X</a>
-    <a href="https://rmebusiness.netlify.app" class="button" target="_blank">Visit Business Dashboard</a>
-  </div>
+    <div class="buttons">
+      <a class="button" href="layouts.html">View Layouts</a>
+      <a class="button" href="mailto:rich@richmediaempire.com">Email Us</a>
+      <a class="button" href="https://x.com/RICHMEDIAEMPIRE" target="_blank">Follow on X</a>
+    </div>
+  </header>
+
+  <section id="layouts" class="layout-box layout1">
+    <h2>Layout Preview</h2>
+    <p>This layout shows how your site could look with a bold hero section and a strong call to action.</p>
+    <button onclick="nextLayout()">Next Layout</button>
+  </section>
+
+  <script>
+    const layouts = ["layout1", "layout2", "layout3", "layout4", "layout5", "layout6"];
+    let current = 0;
+    function nextLayout() {
+      const box = document.querySelector(".layout-box");
+      box.classList.remove(layouts[current]);
+      current = (current + 1) % layouts.length;
+      box.classList.add(layouts[current]);
+    }
+  </script>
 </body>
 </html>
