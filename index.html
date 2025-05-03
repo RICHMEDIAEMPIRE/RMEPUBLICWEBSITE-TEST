@@ -7,7 +7,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #000;
+      background: #000 url('https://placehold.co/1600x900/000000/FFFFFF?text=Spotlights') center/cover no-repeat;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -15,8 +15,13 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
+      position: relative;
     }
-    .logo {
+    .logo img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+    .title {
       font-size: 3rem;
       font-weight: bold;
       background: linear-gradient(to right, gold, orange);
@@ -25,8 +30,8 @@
     }
     .subtitle {
       font-size: 1.25rem;
-      color: #aaa;
-      margin-top: 0.5rem;
+      color: #ccc;
+      margin-top: 0.25rem;
     }
     .actions {
       margin-top: 2rem;
@@ -45,12 +50,15 @@
       position: absolute;
       bottom: 1rem;
       font-size: 0.85rem;
-      color: #555;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="logo">Rich Media Empire</div>
+  <div class="logo">
+    <img src="lion-logo.png" alt="Rich Media Empire Logo" />
+  </div>
+  <div class="title">Rich Media Empire</div>
   <div class="subtitle">Building Brands. Powering Profits. Creating Legacy.</div>
   <div class="actions">
     <a href="layouts.html" class="button">View Design Layouts</a>
