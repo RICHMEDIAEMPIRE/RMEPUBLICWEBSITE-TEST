@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farmhouse Kitchen</title>
+  <meta charset="UTF-8" />
+  <title>Restaurant Landing</title>
   <style>
-    body { font-family: Georgia, serif; margin: 0; background: #fff8f0; color: #333; }
-    header { background: #8b4513; color: white; padding: 2rem; text-align: center; }
-    nav { background: #deb887; display: flex; justify-content: center; gap: 2rem; padding: 1rem; }
-    nav a { text-decoration: none; color: #333; font-weight: bold; }
-    .hero { background: url('https://placehold.co/1200x400') center/cover no-repeat; height: 300px; }
-    .menu { padding: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    .dish { background: #fff; border: 1px solid #ccc; padding: 1rem; border-radius: 8px; }
-    footer { background: #8b4513; color: white; text-align: center; padding: 1rem; }
+    body { margin: 0; font-family: 'Arial', sans-serif; background: url('restaurant.jpg') center/cover no-repeat; color: white; text-align: center; padding: 2rem; }
+    h1 { font-size: 3rem; margin-top: 0; }
+    p { font-size: 1.2rem; max-width: 600px; margin: 1rem auto; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Farmhouse Kitchen</h1>
-    <p>Homestyle Cooking | Locally Sourced</p>
-  </header>
-  <nav>
-    <a href="#">Menu</a>
-    <a href="#">About</a>
-    <a href="#">Reservations</a>
-  </nav>
-  <div class="hero"></div>
-  <section class="menu">
-    <div class="dish"><h3>Grilled Salmon</h3><p>With lemon butter sauce and asparagus.</p></div>
-    <div class="dish"><h3>Country Fried Chicken</h3><p>Served with mashed potatoes and gravy.</p></div>
-    <div class="dish"><h3>Garden Veggie Bowl</h3><p>Fresh roasted vegetables over wild rice.</p></div>
-  </section>
-  <footer>
-    123 Main St, Smalltown | Call us: (555) 123-4567
-  </footer>
+  <h1>Welcome to Flavor Haven</h1>
+  <p>Fresh, local ingredients. Passionate chefs. A dining experience to remember.</p>
+  <script>
+    const homeBtn = document.createElement("a");
+    homeBtn.href = "/";
+    homeBtn.textContent = "Home";
+    homeBtn.style.position = "fixed";
+    homeBtn.style.bottom = "20px";
+    homeBtn.style.left = "20px";
+    homeBtn.style.padding = "10px 15px";
+    homeBtn.style.background = "#ffcc00";
+    homeBtn.style.color = "#000";
+    homeBtn.style.borderRadius = "5px";
+    homeBtn.style.textDecoration = "none";
+    homeBtn.style.fontWeight = "bold";
+    document.body.appendChild(homeBtn);
+  </script>
 </body>
 </html>
