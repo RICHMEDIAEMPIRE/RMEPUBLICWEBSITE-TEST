@@ -6,66 +6,62 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #000 url('https://placehold.co/1600x900/000000/FFFFFF?text=Spotlights') center/cover no-repeat;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      padding: 0;
+      background-image: url('A_logo_for_"Rich_Media_Empire"_is_prominently_disp.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
-      position: relative;
-    }
-    .logo img {
-      max-width: 150px;
-      margin-bottom: 1rem;
-    }
-    .title {
-      font-size: 3rem;
-      font-weight: bold;
-      background: linear-gradient(to right, gold, orange);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .subtitle {
-      font-size: 1.25rem;
-      color: #ccc;
-      margin-top: 0.25rem;
-    }
-    .actions {
-      margin-top: 2rem;
-    }
-    a.button {
-      background: gold;
-      color: black;
-      text-decoration: none;
-      padding: 1rem 2rem;
-      margin: 0.5rem;
-      border-radius: 6px;
-      font-weight: bold;
-      display: inline-block;
-    }
-    footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.85rem;
-      color: #666;
-    }
+    }.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0.3em 0;
+  color: #FFD700;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 0.5em 0 2em;
+}
+
+.button {
+  background-color: #FFD700;
+  border: none;
+  color: black;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #ffcc00;
+}
+
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="lion-logo.png" alt="Rich Media Empire Logo" />
-  </div>
-  <div class="title">Rich Media Empire</div>
-  <div class="subtitle">Building Brands. Powering Profits. Creating Legacy.</div>
-  <div class="actions">
+  <div class="overlay">
+    <h1>Rich Media Empire</h1>
+    <p>Building Brands. Powering Profits. Creating Legacy.</p>
     <a href="layouts.html" class="button">View Design Layouts</a>
     <a href="mailto:rich@richmediaempire.com" class="button">Email Us</a>
+    <a href="https://x.com/RICHMEDIAEMPIRE" class="button" target="_blank">Follow Us on X</a>
+    <a href="https://rmebusiness.netlify.app" class="button" target="_blank">Visit Business Dashboard</a>
   </div>
-  <footer>
-    &copy; 2024 Rich Media Empire. All rights reserved.
-  </footer>
 </body>
 </html>
