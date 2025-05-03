@@ -1,44 +1,77 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout Switcher</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout Gallery</title>
   <style>
-    body { margin: 0; font-family: sans-serif; background: #111; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
-    iframe { width: 100%; height: 100vh; border: none; }
-    button {
-      padding: 0.5rem 1rem;
-      background: #f9d342;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    a.layout-link {
+      display: block;
+      padding: 1.5rem;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #0f0;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    a.layout-link:hover {
+      background: #1a1a1a;
+    }
+    .home-button {
+      display: inline-block;
+      margin-top: 3rem;
+      padding: 0.75rem 1.5rem;
+      background: #ffcc00;
       color: #000;
       font-weight: bold;
-      border: none;
-      margin: 0.5rem;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    .controls {
-      position: fixed;
-      top: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
+      text-decoration: none;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <div class="controls">
-    <button onclick="switchLayout('layout-artist.html')">Artist</button>
-    <button onclick="switchLayout('layout-restaurant.html')">Restaurant</button>
-    <button onclick="switchLayout('layout-startup.html')">Startup</button>
-    <button onclick="switchLayout('layout-merchstore.html')">Merch</button>
-    <button onclick="switchLayout('layout-blog.html')">Blog</button>
-    <button onclick="switchLayout('layout-agency.html')">Agency</button>
-    <button onclick="switchLayout('layout-consultant.html')">Consultant</button>
-    <button onclick="switchLayout('layout-tech.html')">Tech</button>
+  <h1>Layout Showcase</h1>
+  <p>Click a layout below to preview a full-page example</p>
+
+  <div class="grid">
+    <a class="layout-link" href="layout-artist.html">Artist</a>
+    <a class="layout-link" href="layout-restaurant.html">Restaurant</a>
+    <a class="layout-link" href="layout-startup.html">Startup</a>
+    <a class="layout-link" href="layout-merchstore.html">Merch Store</a>
+    <a class="layout-link" href="layout-tech.html">Tech</a>
+    <a class="layout-link" href="layout-consultant.html">Consultant</a>
+    <a class="layout-link" href="layout-blog.html">Blog</a>
+    <a class="layout-link" href="layout-agency.html">Agency</a>
+    <a class="layout-link" href="layout-portfolio.html">Portfolio</a>
+    <a class="layout-link" href="layout-services.html">Services</a>
   </div>
-  <iframe id="preview" src="layout-artist.html"></iframe>  <script>
-    function switchLayout(file) {
-      document.getElementById('preview').src = file;
-    }
-  </script></body>
+
+  <a class="home-button" href="index.html">Return to Home</a>
+</body>
 </html>
