@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Professional Portfolio</title>
+  <style>
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #1a1a1a; color: #e0e0e0; text-align: center; padding: 2rem; }
+    h1 { font-size: 2.5rem; color: #00c853; }
+    p { font-size: 1.2rem; max-width: 650px; margin: 1rem auto; }
+  </style>
+</head>
+<body>
+  <h1>Showcase Your Work</h1>
+  <p>Clean, modern, and responsive. Perfect for freelancers, designers, and professionals who want to impress.</p>
+  <script>
+    const homeBtn = document.createElement("a");
+    homeBtn.href = "/";
+    homeBtn.textContent = "Home";
+    homeBtn.style.position = "fixed";
+    homeBtn.style.bottom = "20px";
+    homeBtn.style.left = "20px";
+    homeBtn.style.padding = "10px 15px";
+    homeBtn.style.background = "#ffcc00";
+    homeBtn.style.color = "#000";
+    homeBtn.style.borderRadius = "5px";
+    homeBtn.style.textDecoration = "none";
+    homeBtn.style.fontWeight = "bold";
+    document.body.appendChild(homeBtn);
+  </script>
+</body>
+</html>
