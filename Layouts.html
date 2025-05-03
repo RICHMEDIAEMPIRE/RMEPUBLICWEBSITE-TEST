@@ -1,46 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RME Web Design</title>
+  <title>Layout Showcase</title>
   <style>
-    body { font-family: sans-serif; background: #111; color: #eee; margin: 0; padding: 0; text-align: center; }
-    header { padding: 2rem; background: #222; }
-    h1 { margin: 0; font-size: 2.5rem; }
-    p { margin: 0.5rem 0 2rem; }
-    a.button { display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #0f0; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; }
-    .layout-box { padding: 2rem; transition: all 0.3s ease; }
-    .layout1 { background: linear-gradient(45deg, #2f2f2f, #3f3f3f); }
-    .layout2 { background: linear-gradient(45deg, #222, #0f0); color: #000; }
-    .layout3 { background: #fff; color: #111; border-top: 10px solid #0f0; }
-    .layout4 { background: #333; color: #0f0; font-family: monospace; }
-    .layout5 { background: #000; color: #fff; font-style: italic; }
-    .layout6 { background: #0f0; color: #000; text-transform: uppercase; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; width: 100%; font-family: Arial, sans-serif; background: #000; color: #fff; overflow: hidden; }
+    .layout-container { position: relative; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; transition: all 0.5s ease; padding: 2rem; text-align: center; }
+    .next-btn {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background: #0f0;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #0f0;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>RME Web Design</h1>
-    <p>Modern, Minimal, Mobile-Ready Sites — $300</p>
-    <a href="#layouts" class="button">View Layouts</a>
-  </header>
+  <div id="layout" class="layout-container"></div>
+  <button class="next-btn" onclick="nextLayout()">Next Layout</button>  <script>
+    const layouts = [
+      `<div><h1>Your Website</h1><p>Clean, modern homepage with a strong hero banner and scroll effects.</p></div>`,
+      `<div><h1>Your Socials</h1><p>Interactive profile cards, X/Twitter feeds, and call-to-action buttons.</p></div>`,
+      `<div><h1>Your Links</h1><p>Mobile-friendly link hub with bold branding and gradient buttons.</p></div>`,
+      `<div><h1>Portfolio</h1><p>Case studies, screenshots, and testimonials with animated transitions.</p></div>`,
+      `<div><h1>Sales Funnel</h1><p>Lead capture page with countdowns, CTA forms, and testimonials.</p></div>`,
+      `<div><h1>Minimal Blog</h1><p>Stylish blog layout with featured posts and clean typography.</p></div>`
+    ];
 
-  <section id="layouts" class="layout-box layout1">
-    <h2>Layout Preview</h2>
-    <p>This layout shows how your site could look with a bold hero section and a strong call to action.</p>
-    <button onclick="nextLayout()">Next Layout</button>
-  </section>
-
-  <script>
-    const layouts = ["layout1", "layout2", "layout3", "layout4", "layout5", "layout6"];
     let current = 0;
+    const container = document.getElementById("layout");
+
     function nextLayout() {
-      const box = document.querySelector(".layout-box");
-      box.classList.remove(layouts[current]);
       current = (current + 1) % layouts.length;
-      box.classList.add(layouts[current]);
+      container.innerHTML = layouts[current];
     }
-  </script>
-</body>
+
+    container.innerHTML = layouts[current];
+  </script></body>
 </html>
