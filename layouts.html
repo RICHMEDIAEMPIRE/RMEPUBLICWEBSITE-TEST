@@ -3,75 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Layout Gallery</title>
+  <title>Layout Showcase | RME Web Design</title>
   <style>
     body {
+      background-color: #111;
+      color: #eee;
+      font-family: sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #000;
-      color: #fff;
+      padding: 0;
       text-align: center;
-      padding: 2rem;
+    }
+    header {
+      padding: 2rem 1rem;
+      background: #000;
     }
     h1 {
+      margin-bottom: 0.5rem;
       font-size: 2.5rem;
-      margin-bottom: 1rem;
     }
-    p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      color: #ccc;
+    section.instructions {
+      background: #1a1a1a;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: auto;
+    section.instructions ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: left;
     }
-    a.layout-link {
-      display: block;
-      padding: 1.5rem;
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 8px;
+    section.instructions li {
+      margin: 0.5rem 0;
+    }
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+      margin-top: 1rem;
+    }
+    footer {
+      padding: 1rem;
+      background: #000;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    footer a {
       color: #0f0;
       text-decoration: none;
+      margin: 0 1rem;
       font-weight: bold;
-      transition: background 0.3s;
-    }
-    a.layout-link:hover {
-      background: #1a1a1a;
-    }
-    .home-button {
-      display: inline-block;
-      margin-top: 3rem;
-      padding: 0.75rem 1.5rem;
-      background: #ffcc00;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <h1>Layout Showcase</h1>
-  <p>Click a layout below to preview a full-page example</p>
+  <header>
+    <h1>Layout Showcase</h1>
+  </header>
 
-  <div class="grid">
-    <a class="layout-link" href="layout-artist.html">Artist</a>
-    <a class="layout-link" href="layout-restaurant.html">Restaurant</a>
-    <a class="layout-link" href="layout-startup.html">Startup</a>
-    <a class="layout-link" href="layout-merchstore.html">Merch Store</a>
-    <a class="layout-link" href="layout-tech.html">Tech</a>
-    <a class="layout-link" href="layout-consultant.html">Consultant</a>
-    <a class="layout-link" href="layout-blog.html">Blog</a>
-    <a class="layout-link" href="layout-agency.html">Agency</a>
-    <a class="layout-link" href="layout-portfolio.html">Portfolio</a>
-    <a class="layout-link" href="layout-services.html">Services</a>
-  </div>
+  <section class="instructions">
+    <h2>How to Navigate</h2>
+    <p>Each layout is a live preview of a different business website style we can build for you.</p>
+    <ul>
+      <li><strong>Home:</strong> Returns to the Rich Media Empire main site.</li>
+      <li><strong>All Layouts:</strong> Loads this showcase homepage.</li>
+      <li><strong>Next Layout:</strong> Moves to the next layout in sequence.</li>
+    </ul>
+    <p>Try them all and imagine your business brought to life!</p>
+  </section>
 
-  <a class="home-button" href="index.html">Return to Home</a>
+  <iframe id="layoutFrame" src="layout-artist.html"></iframe>
+
+  <footer>
+    <a href="index.html">Home</a>
+    <a href="layouts.html">All Layouts</a>
+    <a href="#" onclick="nextLayout()">Next Layout</a>
+  </footer>
+
+  <script>
+    const layouts = [
+      "layout-artist.html",
+      "layout-restaurant.html",
+      "layout-startup.html",
+      "layout-consultant.html",
+      "layout-merch.html",
+      "layout-blog.html",
+      "layout-tech.html",
+      "layout-agency.html",
+      "layout-portfolio.html",
+      "layout-services.html"
+    ];
+    let currentIndex = 0;
+
+    function nextLayout() {
+      currentIndex = (currentIndex + 1) % layouts.length;
+      document.getElementById("layoutFrame").src = layouts[currentIndex];
+    }
+  </script>
 </body>
 </html>
