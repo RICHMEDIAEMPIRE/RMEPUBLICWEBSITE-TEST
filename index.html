@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RICH MEDIA EMPIRE</title>
+  <title>Rich Media Empire</title>
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
       padding: 0;
-      color: white;
       background: url('bg-spotlight-logo.jpg') no-repeat center center fixed;
       background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
       text-align: center;
     }
     header {
-      padding: 3rem 1rem;
       background-color: rgba(0, 0, 0, 0.6);
+      padding: 4rem 1rem 2rem;
     }
     h1 {
       font-size: 3rem;
       margin: 0;
+      background: linear-gradient(to right, gold, orange);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     p {
       font-size: 1.2rem;
@@ -31,28 +34,24 @@
     }
     a.button {
       display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
       background: gold;
-      color: #000;
+      color: black;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 6px;
+      transition: transform 0.2s ease;
     }
-    .layout-box {
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 600px;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
-      transition: all 0.3s ease;
+    a.button:hover {
+      transform: scale(1.05);
     }
-    .layout1 { background-color: rgba(47, 47, 47, 0.6); }
-    .layout2 { background-color: rgba(34, 34, 34, 0.6); color: lime; }
-    .layout3 { background-color: white; color: #111; }
-    .layout4 { background-color: #333; color: lime; font-family: monospace; }
-    .layout5 { background-color: #000; color: white; font-style: italic; }
-    .layout6 { background-color: lime; color: #000; text-transform: uppercase; }
+    footer {
+      margin-top: 4rem;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -66,21 +65,8 @@
     </div>
   </header>
 
-  <section id="layouts" class="layout-box layout1">
-    <h2>Layout Preview</h2>
-    <p>This layout shows how your site could look with a bold hero section and a strong call to action.</p>
-    <button onclick="nextLayout()">Next Layout</button>
-  </section>
-
-  <script>
-    const layouts = ["layout1", "layout2", "layout3", "layout4", "layout5", "layout6"];
-    let current = 0;
-    function nextLayout() {
-      const box = document.querySelector(".layout-box");
-      box.classList.remove(layouts[current]);
-      current = (current + 1) % layouts.length;
-      box.classList.add(layouts[current]);
-    }
-  </script>
+  <footer>
+    &copy; 2025 Rich Media Empire. All rights reserved.
+  </footer>
 </body>
 </html>
