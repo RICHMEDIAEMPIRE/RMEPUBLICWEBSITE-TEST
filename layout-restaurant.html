@@ -2,60 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Layouts | RME Web Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{BUSINESS_NAME}}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #111;
-      color: #eee;
-      font-family: sans-serif;
       margin: 0;
-      padding: 2rem;
-      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
     }
-    h1 {
-      font-size: 2.5rem;
+    header {
+      background: url('{{IMAGE_HERO}}') center/cover no-repeat;
+      height: 80vh;
+      color: white;
+      text-shadow: 1px 1px 3px #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    header img {
+      max-height: 80px;
       margin-bottom: 1rem;
     }
-    p {
-      margin-bottom: 2rem;
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin: 0;
     }
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      max-width: 800px;
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
       margin: auto;
     }
-    a {
-      display: block;
-      background: #0f0;
-      color: #000;
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .menu-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
       padding: 1rem;
+      width: 260px;
+      text-align: center;
+    }
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #b22222;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.2s;
     }
     a:hover {
-      background: #8f8;
+      text-decoration: underline;
+    }
+    .contact {
+      text-align: center;
+      line-height: 1.6;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <h1>Layout Showcase</h1>
-  <p>Click a layout below to preview the full design example.</p>
-  <div class="button-grid">
-    <a href="layout-artist.html">Artist</a>
-    <a href="layout-restaurant.html">Restaurant</a>
-    <a href="layout-startup.html">Startup</a>
-    <a href="layout-consultant.html">Consultant</a>
-    <a href="layout-merch.html">Merch Store</a>
-    <a href="layout-blog.html">Blog</a>
-    <a href="layout-tech.html">Tech</a>
-    <a href="layout-agency.html">Agency</a>
-    <a href="layout-portfolio.html">Portfolio</a>
-    <a href="layout-services.html">Services</a>
-  </div>
+  <header>
+    <img src="{{LOGO_IMAGE}}" alt="{{BUSINESS_NAME}} Logo">
+    <h1>{{BUSINESS_NAME}}</h1>
+    <p>{{TAGLINE}}</p>
+  </header>
+
+  <section>
+    <h2>Our Menu</h2>
+    <div class="menu">
+      <div class="menu-item">
+        <img src="{{IMAGE_MENU_1}}" alt="Menu Item 1">
+        <h3>{{MENU_ITEM_1}}</h3>
+        <p>$12.99</p>
+      </div>
+      <div class="menu-item">
+        <img src="{{IMAGE_MENU_2}}" alt="Menu Item 2">
+        <h3>{{MENU_ITEM_2}}</h3>
+        <p>$14.99</p>
+      </div>
+      <div class="menu-item">
+        <img src="{{IMAGE_MENU_3}}" alt="Menu Item 3">
+        <h3>{{MENU_ITEM_3}}</h3>
+        <p>$10.99</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>About Us</h2>
+    <p>{{ABOUT_TEXT}}</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>{{ADDRESS}}</p>
+    <p>{{PHONE}} | <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+    <p>
+      <a href="{{SOCIAL_FACEBOOK}}" target="_blank">Facebook</a> |
+      <a href="{{SOCIAL_INSTAGRAM}}" target="_blank">Instagram</a>
+    </p>
+    <iframe src="https://maps.google.com/?q={{ADDRESS}}&output=embed"></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 {{BUSINESS_NAME}}. Site by Rich Media Empire.
+  </footer>
 </body>
 </html>
