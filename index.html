@@ -4,27 +4,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rich Media Empire</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background: url('bg-spotlight-logo.jpg') center center / contain no-repeat;
-      background-color: #000;
       color: white;
       text-align: center;
       min-height: 100vh;
+      position: relative;
+      z-index: 1;
     }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('bg-spotlight-logo.jpg') center center / contain no-repeat;
+      background-color: #000;
+      z-index: -1;
+    }
+
     header {
       padding: 3rem 1rem 1rem;
       background: rgba(0, 0, 0, 0.6);
     }
+
     h1 {
       font-size: 3rem;
       margin: 0;
     }
+
     p {
       margin: 0.5rem 0 2rem;
       font-size: 1.2rem;
     }
+
     .button {
       background: gold;
       color: black;
@@ -37,11 +53,13 @@
       text-decoration: none;
       display: inline-block;
     }
+
     section {
       padding: 2rem 1rem;
       background: rgba(0, 0, 0, 0.5);
       margin: 1rem 0;
     }
+
     footer {
       margin: 2rem 0;
       font-size: 0.9rem;
