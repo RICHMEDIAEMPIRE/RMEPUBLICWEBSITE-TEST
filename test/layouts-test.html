@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout Showcase | RME Test</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #222;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: gold;
+      color: black;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav {
+      margin-top: 3rem;
+    }
+    .nav a {
+      margin: 0 1rem;
+      color: #0f0;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>RME Layout Showcase (Test)</h1>
+  <p>Preview each test layout below. Each opens in its own sandboxed test file.</p>
+  <div class="grid">
+    <div class="ca
