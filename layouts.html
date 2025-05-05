@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Layouts | RME Web Design</title>
+  <title>Layout Showcase | RME</title>
   <style>
     body {
-      background-color: #111;
-      color: #eee;
+      background: #111;
+      color: #fff;
       font-family: sans-serif;
       margin: 0;
       padding: 2rem;
@@ -17,45 +17,65 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    p {
-      margin-bottom: 2rem;
-    }
-    .button-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      max-width: 800px;
-      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    a {
-      display: block;
-      background: #0f0;
-      color: #000;
+    .card {
+      background: #222;
+      border: 1px solid #333;
+      border-radius: 10px;
       padding: 1rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.2s;
+      transition: transform 0.2s;
     }
-    a:hover {
-      background: #8f8;
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: gold;
+      color: black;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav {
+      margin-top: 3rem;
+    }
+    .nav a {
+      margin: 0 1rem;
+      color: #0f0;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Layout Showcase</h1>
-  <p>Click a layout below to preview the full design example.</p>
-  <div class="button-grid">
-    <a href="layout-artist.html">Artist</a>
-    <a href="layout-restaurant.html">Restaurant</a>
-    <a href="layout-startup.html">Startup</a>
-    <a href="layout-consultant.html">Consultant</a>
-    <a href="layout-merch.html">Merch Store</a>
-    <a href="layout-blog.html">Blog</a>
-    <a href="layout-tech.html">Tech</a>
-    <a href="layout-agency.html">Agency</a>
-    <a href="layout-portfolio.html">Portfolio</a>
-    <a href="layout-services.html">Services</a>
+  <h1>RME Layout Showcase</h1>
+  <p>Preview each layout below. Each opens in its own page.</p>
+  <div class="grid">
+    <div class="card"><h2>Artist</h2><a href="layout-artist.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Restaurant</h2><a href="layout-restaurant.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Startup</h2><a href="layout-startup.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Consultant</h2><a href="layout-consultant.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Merch Store</h2><a href="layout-merchstore.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Blog</h2><a href="layout-blog.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Tech</h2><a href="layout-tech.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Agency</h2><a href="layout-agency.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Portfolio</h2><a href="layout-portfolio.html" target="_blank">View Layout</a></div>
+    <div class="card"><h2>Services</h2><a href="layout-services.html" target="_blank">View Layout</a></div>
+  </div>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="layouts.html">Layouts</a>
+    <a href="mailto:rich@richmediaempire.com">Contact</a>
   </div>
 </body>
 </html>
