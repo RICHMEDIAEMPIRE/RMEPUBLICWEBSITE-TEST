@@ -1,55 +1,61 @@
-<!-- Layout: Restaurant -->
-<section id="restaurant" style="background-color:#fff9f4; color:#333; font-family:'Open Sans', sans-serif; padding:2rem;">
-  <div class="nav" style="display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-bottom:1.5rem;">
-    <a href="#home" style="text-decoration:none; color:#8B0000; font-weight:bold;">Home</a>
-    <a href="#layouts" style="text-decoration:none; color:#8B0000; font-weight:bold;">Layouts</a>
-    <a href="#consultant" style="text-decoration:none; color:#8B0000; font-weight:bold;">Next</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Layouts | RME Web Design</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    a {
+      display: block;
+      background: #0f0;
+      color: #000;
+      padding: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    a:hover {
+      background: #8f8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Layout Showcase</h1>
+  <p>Click a layout below to preview the full design example.</p>
+  <div class="button-grid">
+    <a href="layout-artist.html">Artist</a>
+    <a href="layout-restaurant.html">Restaurant</a>
+    <a href="layout-startup.html">Startup</a>
+    <a href="layout-consultant.html">Consultant</a>
+    <a href="layout-merch.html">Merch Store</a>
+    <a href="layout-blog.html">Blog</a>
+    <a href="layout-tech.html">Tech</a>
+    <a href="layout-agency.html">Agency</a>
+    <a href="layout-portfolio.html">Portfolio</a>
+    <a href="layout-services.html">Services</a>
   </div>
-
-  <h1 style="text-align:center; font-family:'Playfair Display', serif; font-size:2.5rem; margin-bottom:0;">Taste Haven</h1>
-  <p style="text-align:center; font-size:1.2rem; margin-top:0;">Fine Dining & Local Flavors</p>
-
-  <div style="background-image: url('assets/images/restaurant-hero.jpg'); background-size: cover; background-position: center; height: 300px; margin: 1rem 0; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 4px #000; font-size: 2rem; font-family: 'Playfair Display', serif;">
-    Welcome to Taste Haven
-  </div>
-
-  <section style="text-align: center;">
-    <h2>Our Menu</h2>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;">
-      <div style="background:#fff; border:1px solid #ddd; border-radius:10px; padding:1rem; width:250px;">
-        <h3>Grilled Salmon</h3>
-        <p>Served with lemon butter and seasonal veggies</p>
-        <p><strong>$18.99</strong></p>
-      </div>
-      <div style="background:#fff; border:1px solid #ddd; border-radius:10px; padding:1rem; width:250px;">
-        <h3>Filet Mignon</h3>
-        <p>8oz premium cut with garlic mash and asparagus</p>
-        <p><strong>$29.99</strong></p>
-      </div>
-      <div style="background:#fff; border:1px solid #ddd; border-radius:10px; padding:1rem; width:250px;">
-        <h3>Caesar Salad</h3>
-        <p>Crisp romaine, shaved parmesan, homemade dressing</p>
-        <p><strong>$9.99</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <section style="text-align: center; margin-top:2rem;">
-    <h2>About Us</h2>
-    <p>Taste Haven is your neighborhood escape into flavorful excellence, combining classic recipes with modern twists. Our chefs are passionate about making every dish memorable.</p>
-  </section>
-
-  <section style="text-align: center; margin-top:2rem;">
-    <h2>Contact</h2>
-    <p>Email: reservations@tastehaven.com</p>
-    <p>Phone: (555) 123-4567</p>
-    <p>Address: 456 Culinary Blvd, Foodie Town, USA</p>
-  </section>
-
-  <!-- Bottom Buttons -->
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:2.5rem;">
-    <a href="#home" style="padding: 0.75rem 1.5rem; background-color: #8B0000; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Home</a>
-    <a href="#layouts" style="padding: 0.75rem 1.5rem; background-color: #8B0000; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Layouts</a>
-    <a href="#consultant" style="padding: 0.75rem 1.5rem; background-color: #8B0000; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Next Layout</a>
-  </div>
-</section>
+</body>
+</html>
