@@ -4,43 +4,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rich Media Empire</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
+      background: url('bg-spotlight-logo.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       text-align: center;
-      min-height: 100vh;
-      position: relative;
-      z-index: 1;
     }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('bg-spotlight-logo.jpg') center center / contain no-repeat;
-      background-color: #000;
-      z-index: -1;
-    }
-
     header {
       padding: 3rem 1rem 1rem;
       background: rgba(0, 0, 0, 0.6);
     }
-
     h1 {
       font-size: 3rem;
       margin: 0;
     }
-
     p {
       margin: 0.5rem 0 2rem;
       font-size: 1.2rem;
     }
-
     .button {
       background: gold;
       color: black;
@@ -53,13 +36,18 @@
       text-decoration: none;
       display: inline-block;
     }
-
-    section {
+    input[type="email"] {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+      margin-right: 0.5rem;
+    }
+    .signup-section {
       padding: 2rem 1rem;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.6);
       margin: 1rem 0;
     }
-
     footer {
       margin: 2rem 0;
       font-size: 0.9rem;
@@ -72,29 +60,39 @@
     <h1>Rich Media Empire</h1>
     <p>Building Brands. Powering Profits. Creating Legacy.</p>
   </header>
-  <section>
-    <h2>Ebooks</h2>
-    <a class="button" href="https://rmempire.gumroad.com" target="_blank">View Ebooks</a>
+
+  <section class="signup-section">
+    <h2>Get 10% Off Your First Order</h2>
+    <p>Join our email list and get a 10% off coupon for the Rich Media Empire Etsy store.</p>
+    <form action="https://your-email-list-provider.com/subscribe" method="POST" target="_blank">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit" class="button">Subscribe & Get 10% Off</button>
+    </form>
   </section>
+
   <section>
     <h2>Merch Store</h2>
-    <a class="button" href="https://richmediaempire.myshopify.com" target="_blank">Shopify</a>
     <a class="button" href="https://www.etsy.com/shop/RICHMEDIAEMPIRE" target="_blank">Etsy</a>
+  </section>
+  <section>
+    <h2>Web Design</h2>
+    <p>Starting at $250</p>
+    <a class="button" href="mailto:rich@richmediaempire.com">Inquire</a>
+    <a class="button" href="webdesign.html">Web Design</a>
+  </section>
+  <section>
+    <h2>Ebooks</h2>
+    <a class="button" href="https://rmempire.gumroad.com/l/flxaw?_gl=1*g50c9t*_ga*MTAxNDA4MzI1My4xNzQ2NjQ3OTU3*_ga_6LJN6D94N6*czE3NDY2NDc5NTYkbzEkZzEkdDE3NDY2NDk4NTMkajAkbDAkaDA." target="_blank">View Ebooks</a>
   </section>
   <section>
     <h2>Content</h2>
     <a class="button" href="https://youtube.com/@RICHMEDIAEMPIRE" target="_blank">YouTube Channel</a>
   </section>
   <section>
-    <h2>Web Design</h2>
-    <p>Starting at $300</p>
-    <a class="button" href="mailto:rich@richmediaempire.com">Inquire</a>
-    <a class="button" href="layouts.html">View Layouts</a>
-  </section>
-  <section>
     <h2>Socials</h2>
     <a class="button" href="https://x.com/RICHMEDIAEMPIRE" target="_blank">Follow on X</a>
   </section>
+
   <footer>
     &copy; 2024 Rich Media Empire. All rights reserved.
   </footer>
