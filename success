@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You – Rich Media Empire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    .button {
+      background: gold;
+      color: black;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>You're In! 🎉</h1>
+  <p>Thanks for joining Rich Media Empire!</p>
+  <p>Check your inbox for your 10% Etsy coupon code and instructions.</p>
+  <p>If you don’t see it, check your spam or promotions folder.</p>
+  <a class="button" href="https://www.etsy.com/shop/RICHMEDIAEMPIRE" target="_blank">Browse Our Shop</a>
+</body>
+</html>
